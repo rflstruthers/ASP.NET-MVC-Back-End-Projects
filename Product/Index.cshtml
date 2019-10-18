@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ManagementPortal.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>Products</h2>
+<div class="card mx-2 px-3 py-1">
+    <p>
+        @Html.ActionLink("View Cart", "Index", "CartItem")
+    </p>
+
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-6 col-lg-3 py-2">
+                    <div class="card">
+                        <img src="~/Content/images/Product/@(item.ImagePath)" class="card-img-top mx-auto" alt="Image" style="width:210px;height:200px;" />
+                        <div class="card-body">
+                            <h5 class="card-title">@(Html.DisplayFor(modelItem => item.ProductName))</h5>
+                            <p class="card-text">$@(Html.DisplayFor(modelItem => item.UnitPrice))</p>
+                            <p class="card-text"><small class="text-muted">@(Html.DisplayFor(modelItem => item.ProductDescription))</small></p>
+                            <p class="card-text">
+                                @Html.ActionLink("Add To Cart", "AddToCart", "CartItem", new { id = item.ProductId }, null) |
+                                @Html.ActionLink("Details", "Details", new { id = item.ProductId })
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

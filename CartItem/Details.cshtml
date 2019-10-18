@@ -1,0 +1,43 @@
+﻿@model ManagementPortal.Models.CartItem
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+
+<div class="card mx-2 px-3 py-1">
+    <div>
+        <h4>Product</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dd>
+                <img src="~/Content/images/Product/@(Model.Product.ImagePath)" class="card-img-top mx-auto" alt="Image" style="width:210px;height:200px;" />
+            </dd>
+
+            <dd>
+                @Html.DisplayFor(model => model.Product.ProductName)
+            </dd>
+
+            <dt>
+                Description
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Product.ProductDescription)
+            </dd>
+
+            <dt>
+                Price
+            </dt>
+
+            <dd>
+                $@Html.DisplayFor(model => model.Product.UnitPrice)
+            </dd>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Back to Cart", "Index")
+    </p>
+</div>
