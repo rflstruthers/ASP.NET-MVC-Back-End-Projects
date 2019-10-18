@@ -96,7 +96,29 @@ I created Views for Product and CartItem to display the products for sale as wel
                 </div>
             </div>
         </div>
+        
+### Chat Message Edit
+The application had a chat message functionality, with the administrator able to edit all messages. As it was, the administrator could edit the date the message was sent and the user that sent it as well as the content of the message. I was tasked with changing the edit page so only the message content could be edited.
 
+        // Makes a list of ChatMessage properties that we don't want changed so only the Message property can be edited.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "ChatMessageId,Sender,Date,Message")] ChatMessage chatMessage)
+        {
+            if (ModelState.IsValid)
+            {
+                var excluded = new[] { "Date", "Sender" };
+                var entry = db.Entry(chatMessage);
+                entry.State = EntityState.Modified;
+                foreach (var name in excluded)
+                {
+                    entry.Property(name).IsModified = false;
+                }
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(chatMessage);
+        }
 
 ## Other Skills Learned
 * Working with a group of developers to identify bugs to the improve usability of an application.
