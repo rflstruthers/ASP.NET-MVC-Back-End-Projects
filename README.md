@@ -127,5 +127,6 @@ The application had a chat message functionality, with the administrator able to
 * Practice with team programming/pair programming when one developer runs into a bug they cannot solve.
 * Participating in daily Stand-Up's to update the Project Manager and peers on my work.
 * Planning how to complete a User Story and implementing that plan to satify the Story requirements.
+* Producing results by a specified deadline.
   
 *Jump to: [Back End Stories](#back-end-stories), [Page Top](#live-project)*
