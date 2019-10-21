@@ -98,7 +98,7 @@ I created Views for Product and CartItem to display the products for sale as wel
         </div>
         
 ### Chat Message Edit
-The application had a chat message functionality, with the administrator able to edit all messages. As it was, the administrator could edit the date the message was sent and the user that sent it as well as the content of the message. I was tasked with changing the edit page so only the message content could be edited. I had to make a list of the ChatMessage properties I didn't want to be changed in oredr to have the method only affect the message content.
+The application had a chat message functionality, with the administrator able to edit all messages. As it was, the administrator could edit the date the message was sent and the user that sent it as well as the content of the message. I was tasked with changing the edit page so only the message content could be edited. I had to make a list of the ChatMessage properties I didn't want to be changed in oredr to have the method only affect the message content. I also changed the View associated with the method to show the Date and Sender as read-only.
 
         // Makes a list of ChatMessage properties that we don't want changed so only the Message property can be edited.
         [HttpPost]
