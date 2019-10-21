@@ -3,7 +3,7 @@
 ## Introduction
 For the last two weeks of my time at the tech academy, I worked with my peers in a team developing a full scale MVC/MVVM Web Application in C#. Working on a legacy codebase was a great learning oppertunity for fixing bugs, cleaning up code, and adding requested features. I saw how a good developer works with what they have to make a quality product. I worked on several [back end stories](#back-end-stories) that I am very proud of and was abale to gain experience both adding a new feature for the application and updating existing code. Over the two week sprint I also had the opportunity to work on some other project management and team programming [skills](#other-skills-learned) that have made me a better developer.
 
-Below are descriptions of the stories I worked on, along with code snippets and navigation links. The full code files are in this repo.
+Below are descriptions of the stories I worked on, along with code snippets and navigation links. The full code files I worked on are in this repo.
 
 ## Back End Stories
 ### Products and Shopping Cart
@@ -29,7 +29,7 @@ I then created a Controller each for Product and CartItem. The product Controlle
             } 
         }
 
-The CartItem Controller has methods for adding an item to the cart, displaying the items in the cart, increasing and decreasing the quantity of a product, as well as deleting a product from the cart and viewing the product's details. I had to determine the user's identity in order to make the CartItem object specific to the user.
+The CartItem Controller has methods for adding an item to the cart, displaying the items in the cart, increasing and decreasing the quantity of a product, as well as deleting a product from the cart and viewing the product's details. I had to determine the user's identity in order to make the CartItem object specific to the user. The AddToCart method checks whether the selected Product is already in the CartItems database table, if it isn't then the Product is added as a CartItem, if it is, then the Quantity property is increased by one.
 
         // Add selected Product to CartItems
         // Check if Product already exists in CartItems, if so then add 1 to the Quantity, 
@@ -98,7 +98,7 @@ I created Views for Product and CartItem to display the products for sale as wel
         </div>
         
 ### Chat Message Edit
-The application had a chat message functionality, with the administrator able to edit all messages. As it was, the administrator could edit the date the message was sent and the user that sent it as well as the content of the message. I was tasked with changing the edit page so only the message content could be edited.
+The application had a chat message functionality, with the administrator able to edit all messages. As it was, the administrator could edit the date the message was sent and the user that sent it as well as the content of the message. I was tasked with changing the edit page so only the message content could be edited. I had to make a list of the ChatMessage properties I didn't want to be changed in oredr to have the method only affect the message content.
 
         // Makes a list of ChatMessage properties that we don't want changed so only the Message property can be edited.
         [HttpPost]
@@ -126,5 +126,6 @@ The application had a chat message functionality, with the administrator able to
 * Learning new efficiencies from other developers by observing their workflow and asking questions.  
 * Practice with team programming/pair programming when one developer runs into a bug they cannot solve.
 * Participating in daily Stand-Up's to update the Project Manager and peers on my work.
+* Planning how to complete a User Story and implementing that plan to satify the Story requirements.
   
 *Jump to: [Back End Stories](#back-end-stories), [Page Top](#live-project)*
