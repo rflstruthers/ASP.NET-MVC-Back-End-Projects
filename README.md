@@ -96,7 +96,9 @@ I created Views for Product and CartItem to display the products for sale as wel
                 </div>
             </div>
         </div>
-        
+
+Creating new Model classes tought me the importance of planning before starting to code. I had to think carefully about what properties the classes I cerated would need and how the two classes would interact with eachother. Having a well thought out plan enabled me to be more efficient with my code writing and produce a better result in less time.
+
 ### Chat Message Edit
 The application had a chat message functionality, with the administrator able to edit all messages. As it was, the administrator could edit the date the message was sent and the user that sent it as well as the content of the message. I was tasked with changing the edit page so only the message content could be edited. I had to make a list of the ChatMessage properties I didn't want to be changed in oredr to have the method only affect the message content. I also changed the View associated with the method to show the Date and Sender as read-only.
 
@@ -119,6 +121,8 @@ The application had a chat message functionality, with the administrator able to
             }
             return View(chatMessage);
         }
+        
+Working on an existing part of the application gave me valuable experience troubleshooting code written by others. I debugged the existing code to determine how it was working and then made the necessary edits to fulfill the Story requirements. This was important practice in development that I will undoubtedly use many times in my future projects.
 
 ## Other Skills Learned
 * Working with a group of developers to identify bugs to the improve usability of an application.
